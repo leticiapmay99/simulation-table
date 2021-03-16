@@ -1,0 +1,18 @@
+.centralizer {
+    display: flex;
+    justify-content: center;
+}
+.centralizer-page {
+    display: grid;
+    justify-content: center;
+}
+
+.margin {
+    margin-right: 5rem;
+}
+.example-full-width {
+    width: 100%;
+}
+.width {
+    width: -webkit-fill-available;
+}

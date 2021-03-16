@@ -1,0 +1,33 @@
+<h1 class="centralizer">Tabela de Simulação</h1>
+
+<div class="centralizer-page">
+
+        <form [formGroup]="form1" (ngSubmit)="sendData()">
+           
+            <mat-form-field class="width">
+                <mat-label>Tempo a ser simulado (minutos)</mat-label>
+                <input matInput  type="number" formControlName="time">
+            </mat-form-field>
+            <div>
+                <mat-form-field class="margin">
+                    <mat-label>TEC</mat-label>
+                    <input matInput  type="number" formControlName="tec">
+                </mat-form-field>
+                <button mat-raised-button color="primary" (click)="addTec()"> Adicionar</button>
+            </div>
+            <p *ngFor="let item of tecArray">{{item}}</p>
+
+            <div>
+                <mat-form-field class="margin">
+                    <mat-label>TS</mat-label>
+                    <input matInput  type="number" formControlName="ts">
+                </mat-form-field>
+                <button mat-raised-button color="primary" (click)="addTs()"> Adicionar</button>
+            </div>
+            <p *ngFor="let item of tsArray">{{item}}</p>
+            <div>
+                <button mat-raised-button color="primary" type="submit"> Simular</button>
+            </div>
+           
+        </form>
+</div>

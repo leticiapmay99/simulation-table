@@ -26,26 +26,28 @@ export class PageSimulation implements OnInit {
             ts: ['']
         });
     }
-    sendData() {
-        const TIME = this.form1.get('time')?.value
 
-        
-    }
     addTec(){
         const tec = this.form1.get('tec')?.value
-        this.tecArray.push(tec)
-        console.log(this.tecArray);
-        this.tecArray.forEach((element:any) => {
-            console.log(element);
-        });
+        this.tecArray.push(tec) 
     }
     addTs(){
         const tec = this.form1.get('ts')?.value
         this.tsArray.push(tec)
-        console.log(this.tsArray);
-        this.tsArray.forEach((element:any) => {
-            console.log(element);
-        });
     }
-   
+    sendData() {
+        const TIME = this.form1.get('time')?.value
+
+        // this.tsArray.forEach((element:any) => {
+        //     console.log(element);
+        //     console.log(randomElement);
+        // });
+        const randomElement = this.tsArray[(Math.random() * this.tsArray.length)];
+        console.log(randomElement);
+
+        // this.tecArray.forEach((element:any) => {
+        //     console.log(element);
+        // });
+    }
+
 }

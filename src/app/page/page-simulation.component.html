@@ -2,32 +2,73 @@
 
 <div class="centralizer-page">
 
-        <form [formGroup]="form1" (ngSubmit)="sendData()">
-           
-            <mat-form-field class="width">
-                <mat-label>Tempo a ser simulado (minutos)</mat-label>
-                <input matInput  type="number" formControlName="time">
+    <form [formGroup]="form1">
+        
+        <mat-form-field class="width">
+            <mat-label>Tempo a ser simulado (minutos)</mat-label>
+            <input matInput  type="number" formControlName="time">
+        </mat-form-field>
+        <div>
+            <mat-form-field class="margin">
+                <mat-label>TEC</mat-label>
+                <input matInput  type="number" formControlName="tec">
             </mat-form-field>
-            <div>
-                <mat-form-field class="margin">
-                    <mat-label>TEC</mat-label>
-                    <input matInput  type="number" formControlName="tec">
-                </mat-form-field>
-                <button mat-raised-button color="primary" (click)="addTec()"> Adicionar</button>
-            </div>
-            <p *ngFor="let item of tecArray">{{item}}</p>
+            <button mat-raised-button color="primary" (click)="addTec()"> Adicionar</button>
+        </div>
+        <p *ngFor="let item of tecArray">{{item}}</p>
 
-            <div>
-                <mat-form-field class="margin">
-                    <mat-label>TS</mat-label>
-                    <input matInput  type="number" formControlName="ts">
-                </mat-form-field>
-                <button mat-raised-button color="primary" (click)="addTs()"> Adicionar</button>
-            </div>
-            <p *ngFor="let item of tsArray">{{item}}</p>
-            <div>
-                <button mat-raised-button color="primary" type="submit"> Simular</button>
-            </div>
-           
-        </form>
+        <div>
+            <mat-form-field class="margin">
+                <mat-label>TS</mat-label>
+                <input matInput  type="number" formControlName="ts">
+            </mat-form-field>
+            <button mat-raised-button color="primary" (click)="addTs()"> Adicionar</button>
+        </div>
+        <p *ngFor="let item of tsArray">{{item}}</p>
+        
+        <button mat-raised-button color="primary" type="submit" (click)="sendData()"> Simular</button>
+        
+    
+        <table class="table"  >
+            <thead> 
+                <tr>
+                    <th scope="col" class="min-table">Cliente</th>
+                    <th scope="col" class="min-table">Tempo desde a última chegada (minutos)</th>
+                    <th scope="col" class="min-table">Tempo de chegada no relógio da simulação</th>
+                    <th scope="col" class="min-table">Tempo de serviço (minutos)</th>
+                    <th scope="col" class="min-table">Tempo de inicio do serviço no relógio da simulação</th>
+                    <th scope="col" class="min-table">Tempo da cliente na fila (minutos)</th>
+                    <th scope="col" class="min-table">Tempo final do serviço no relógio da simulação</th>
+                    <th scope="col" class="min-table">Tempo do cliente no sistema (minutos)</th>
+                    <th scope="col" class="min-table">Tempo livre do operador (minuto)</th>
+                </tr>
+            </thead>
+            
+            <tbody  *ngFor="let item of customers; let i= index">
+                <tr>
+
+                    <td class="min-table align-table">{{i}}</td>
+                    <td class="min-table align-table">{{item.tec}}</td>
+                    <td class="min-table align-table">{{item.TempoChegadaNoRelogio}}</td>
+                    <td class="min-table align-table">{{item.ts}}</td>
+                    <td class="min-table align-table">{{item.TempoInicio}}</td>
+                    <td class="min-table align-table">{{item.TempoClienteFila}}</td>
+                    <td class="min-table align-table">{{item.TempoFinal}}</td>
+                    <td class="min-table align-table">{{item.TempoSistema}}</td>
+                    <td class="min-table align-table">{{item.TempoLivreOperador}}</td>
+                <tr>
+            </tbody>
+        </table>
+
+        <p>Tempo médio de espera na fila: {{avgTempoMedioFila}}</p>
+        <p>Probabilidade de um cliente esperar na fila: {{avgProbabilidadeClientefila}}</p>
+        <p>Probabilidade do Operador Livre: {{avgProbabilidadeOperadorLivre}}</p>
+        <p>Tempo médio de serviço: {{avgTempoMedioServico}}</p>
+        <p>Tempo médio despendido no sistema: {{avgTempoMedioDespendidoSistema}}</p>
+            
+
+
+
+
+    </form>
 </div>

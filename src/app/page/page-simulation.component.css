@@ -17,5 +17,8 @@
     width: 100%;
 }
 .width {
-    width: -webkit-fill-available;
+    width: 26%;
+}
+mat-card {
+    margin-bottom: 3rem;
 }

@@ -9,24 +9,30 @@
                 <input matInput  type="number" formControlName="time">
             </mat-form-field>
             <div>
-                <mat-form-field class="margin">
-                    <mat-label>TEC</mat-label>
+                <mat-form-field class="margin width">
+                    <mat-label>TEC (Tempo entre as chegadas)</mat-label>
                     <input matInput  type="number" formControlName="tec">
                 </mat-form-field>
-                <button mat-raised-button color="primary" (click)="addTec()"> Adicionar</button>
+                <button mat-raised-button class="margin add"  (click)="addTec()"> Adicionar</button>
+                <button mat-raised-button color="warn" type="submit" (click)="clearTec()"> Limpar</button>  
+
             </div>
             <span *ngFor="let item of tecArray">&nbsp;{{item}}</span>
     
             <div>
-                <mat-form-field class="margin">
-                    <mat-label>TS</mat-label>
+                <mat-form-field class="margin width">
+                    <mat-label>TS (Tempo de serviço)</mat-label>
                     <input matInput  type="number" formControlName="ts">
                 </mat-form-field>
-                <button mat-raised-button color="primary" (click)="addTs()"> Adicionar</button>
+                <button mat-raised-button class="margin add" (click)="addTs()"> Adicionar</button>
+                <button mat-raised-button color="warn" type="submit" (click)="clearTs()"> Limpar</button>  
+
             </div>
             <span *ngFor="let item of tsArray">&nbsp;{{item}}</span>
             <div class="centralizer">
-                <button mat-raised-button color="primary" type="submit" (click)="sendData()"> Simular</button>  
+                <button mat-raised-button color="primary" class="margin" type="submit" (click)="sendData()"> Simular</button>  
+                <button mat-raised-button color="warn" type="submit" (click)="clear()"> Limpar</button>  
+
             </div>
         </mat-card>
         
@@ -48,7 +54,7 @@
                     </tr>
                 </thead>
                 
-                <tbody  *ngFor="let item of customers; let i= index">
+                <tbody  *ngFor="let item of clients; let i= index">
                     <tr>
                         <td class="min-table align-table">{{i}}</td>
                         <td class="min-table align-table">{{item.tec}}</td>

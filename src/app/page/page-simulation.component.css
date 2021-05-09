@@ -22,3 +22,7 @@
 mat-card {
     margin-bottom: 3rem;
 }
+.add {
+    background-color: #148614;
+    color: white;
+}

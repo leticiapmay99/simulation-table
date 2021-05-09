@@ -1,27 +1,20 @@
-# SimulationTable
+# Tabela de Simulação
+    Trabalho desenvolvido para a matérias de Simulação do Curso de Ciência da Computação da URI-Erechim 
+    
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.6.
+## Executando a aplicação
 
-## Development server
+Certifique-se que tenha instalado o NodeJS  em sua máquina.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Clone o repositório, acesse a raiz do projeto e instale as dependências.
 
-## Code scaffolding
+> npm install
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Para executar a aplicação, execute o comando abaixo:
 
-## Build
+> ng serve
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## Autor
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+| [<img src="https://avatars.githubusercontent.com/u/43357500?s=400&u=92351cf0f617cdc148a3634d85c26546a63e3766&v=4" width=115><br><sub>@leticia-may</sub>](https://www.linkedin.com/in/let%C3%ADcia-may/)
+| :---: |

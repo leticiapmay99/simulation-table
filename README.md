@@ -1,7 +1,10 @@
 # Tabela de Simulação
-Trabalho desenvolvido para a matérias de Simulação do Curso de Ciência da Computação da URI-Erechim 
-    
+Trabalho desenvolvido para a matérias de Simulação do Curso de Ciência da Computação da URI-Erechim.
+
+Telas:
 ![](src/assets/imagem1.png)
+![](src/assets/imagem2.png)
+![](src/assets/imagem3.png)
 ## Executando a aplicação
 
 Certifique-se que tenha instalado o NodeJS  em sua máquina.
